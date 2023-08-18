@@ -52,6 +52,7 @@ header {
   font-weight: 300;
 }
 .logo > p {
+  margin-top: -5px;
   font-size: 1.25em;
   font-variant: small-caps;
 }
@@ -136,6 +137,41 @@ section#capa h1 {
   font-size: 8em;
 }
 section#capa p {
+  margin-top: -15px;
   font-variant: small-caps;
   font-size: 1.5em;
+}
+/* Texto dentro do main */
+main article {
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+section.adquira-plano {
+  padding: 50px 0;
+}
+section.adquira-plano p {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 2em;
+}
+/* LISTA COM ÍCONES NA HORIZONTAL */
+ul.lista-icones-horizontal {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between; /*Espaço igual entre itens */
+}
+ul.lista-icones-horizontal img {
+  width: 100px;
+  height: 100px;
+}
+ul.lista-icones-horizontal li {
+  text-align: center;
+}
+ul.lista-icones-horizontal p {
+  padding: 0;
 }
