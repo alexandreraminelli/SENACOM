@@ -175,3 +175,9 @@ ul.lista-icones-horizontal li {
 ul.lista-icones-horizontal p {
   padding: 0;
 }
+
+/* PADDING DE SECTIONS E ARTICLES */
+.adquira-plano {
+  max-width: 1200px;
+  margin: auto;
+}
