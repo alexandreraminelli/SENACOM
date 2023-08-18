@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+:root {
+  /* Cores */
+  --cor1: #0a0a0a;
+  --cor2: #333333;
+  --cor3: #dce0d9;
+  --cor4: #0078d3;
+  --cor5: #56d97f;
+
+  --cor1-transparente: #0a0a0a80;
+
+  /* Fonte */
+  --fonte-padrao: "Lato", Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte-padrao);
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  background-color: var(--cor1-transparente);
+  backdrop-filter: blur(15px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.logo {
+  padding: 10px;
+  /* Gradiente-texto */
+  background-image: linear-gradient(to bottom left, var(--cor4), var(--cor5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.logo > h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
+.logo > p {
+  font-size: 1.25em;
+  font-variant: small-caps;
+}
+
+nav {
+  height: 100%;
+  padding: 0 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+nav li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+nav a {
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 1.3em;
+
+  color: var(--cor3);
+}
+/* Efeito hover */
+a#pagina-atual,
+nav a:hover {
+  color: red;
+}
+
+section#capa {
+  height: 700px;
+  background: url(../paginas/inicio/imagens/capa.jpg) center center no-repeat fixed;
+  box-shadow: inset 0 -11px 10px rgba(0, 0, 0, 0.5);
+}
