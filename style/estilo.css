@@ -22,12 +22,16 @@
   padding: 0;
   font-family: var(--fonte-padrao);
 }
+html,
+body {
+  background-color: var(--cor3);
+}
 
 header {
   width: 100vw;
   position: fixed;
   background-color: var(--cor1-transparente);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
 
   display: flex;
   align-items: center;
@@ -93,7 +97,7 @@ nav a::after {
 a#pagina-atual,
 nav a:hover {
   /* Gradiente-texto */
-  background-image: linear-gradient(to bottom left, var(--cor4), var(--cor5));
+  background-image: linear-gradient(to left, var(--cor4), var(--cor5));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -102,9 +106,36 @@ a#pagina-atual::after,
 nav a:hover::after {
   transform: scaleX(1);
 }
-
+/* CAPA */
 section#capa {
   height: 700px;
   background: url(../paginas/inicio/imagens/capa.jpg) center center no-repeat fixed;
+  background-size: cover;
   box-shadow: inset 0 -11px 10px rgba(0, 0, 0, 0.5);
+}
+section > div {
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#capa h1,
+section#capa p {
+  /* Gradiente-texto */
+  background-image: linear-gradient(to bottom left, var(--cor4), var(--cor5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+section#capa h1 {
+  font-weight: 400;
+  font-size: 8em;
+}
+section#capa p {
+  font-variant: small-caps;
+  font-size: 1.5em;
 }
